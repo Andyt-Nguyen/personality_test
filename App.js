@@ -6,24 +6,22 @@
  * @flow
  */
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import React, { Component } from 'react';
+import { StyleSheet, View } from 'react-native';
+import { Header, CircleButton, Question } from "./components/common"
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+        <Header title={"Section One"} />
+        <Question />
+        <View style={styles.btnWrapper}>
+          <CircleButton color={"#EF476F"} text={"1"} />
+          <CircleButton color={"#1AA1E2"} text={"2"} />
+          <CircleButton color={"#FFD166"} text={"3"} />
+          <CircleButton color={"#06D6A0"} text={"4"} />
+        </View>
       </View>
     );
   }
@@ -31,19 +29,19 @@ export default class App extends Component<Props> {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    flex:1,
+    backgroundColor: "#073B4C"
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+
+  btnWrapper: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    marginTop: 20
+  }
+})
+
+// #2A1E5C purple
+// #073B4C dark blue
+// #B37BA4 light purple pink
+// #4E4B5C dark grey
+// #38686A dark green
