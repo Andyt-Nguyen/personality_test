@@ -1,20 +1,23 @@
 import React from "react"
-import { View, Button, StyleSheet } from "react-native"
+import { TouchableOpacity, Text, StyleSheet } from "react-native"
 
 export default (props) => (
-    <View style={{...styles.btnStyle, backgroundColor:props.color}}>
-        <Button
-            title={`${props.text}`}
-            color="#ffffff"
-            accessibilityLabel={"Button " + props.text }
-        />
-    </View>
+    <TouchableOpacity 
+        style={{...styles.btnStyle, backgroundColor:props.color}} 
+        onPress={props.onPress}
+    >
+        <Text style={styles.textStyle}>{props.text}</Text>
+    </TouchableOpacity>
 )
 
 const styles = StyleSheet.create({
+    textStyle: {
+        color:"#ffffff",
+        fontSize: 20
+    },
     btnStyle: {
-        width: 60,
-        height: 60,
+        width: 55,
+        height: 55,
         backgroundColor: "#25A18E",
         borderRadius: 50,
         alignItems: "center",

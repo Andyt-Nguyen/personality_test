@@ -1,9 +1,15 @@
 import CircleButton from "./CircleButton"
 import Header from "./Header"
-import Question from "./Question"
+import AttributeContainer from "./AttributeContainer"
+import AttributeText from "./AttributeText"
+import BtnGroup from "./BtnGroup"
+import Questionaire from "./Questionaire"
 
 export {
     Header,
     CircleButton,
-    Question
+    AttributeContainer,
+    AttributeText,
+    BtnGroup,
+    Questionaire
 }
