@@ -37,9 +37,15 @@ export default class ColorRateSection extends React.Component {
     }
 
     _onSelectedNum = (num) => {
-        this.setState({selectedNum: num}, () => {
-            this.props.incColorCount(this.props.colorSection, this.state.selectedNum)
-        })
+        if(this.state.selectedNum != 0) {
+            this.setState({selectedNum: 0}, () => {
+                this.props.incColorCount(this.props.colorSection, this.state.selectedNum)
+            })
+        } else {
+            this.setState({selectedNum: num}, () => {
+                this.props.incColorCount(this.props.colorSection, this.state.selectedNum)
+            })
+        }
     }
 
     componentWillReceiveProps(nextProps) {

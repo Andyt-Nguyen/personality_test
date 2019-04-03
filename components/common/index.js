@@ -4,6 +4,7 @@ import AttributeText from "./AttributeText"
 import CircleBtn from "./CircleBtn"
 import Center from "./Center"
 import BtnWrapper from "./BtnWrapper"
+import ColorRateSection from "./ColorRateSection"
 
 export {
     Header,
@@ -11,5 +12,6 @@ export {
     AttributeText,
     CircleBtn,
     Center,
-    BtnWrapper
+    BtnWrapper,
+    ColorRateSection
 }
