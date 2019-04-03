@@ -3,7 +3,11 @@ import { TouchableOpacity, Text, StyleSheet } from "react-native"
 
 export default (props) => (
     <TouchableOpacity 
-        style={{...styles.btnStyle, backgroundColor:props.color}} 
+        style={{
+            ...styles.btnStyle,
+            borderColor: props.color,
+            backgroundColor: props.num === parseInt(props.text) ? props.color: "transparent"
+        }} 
         onPress={props.onPress}
     >
         <Text style={styles.textStyle}>{props.text}</Text>
@@ -16,9 +20,9 @@ const styles = StyleSheet.create({
         fontSize: 20
     },
     btnStyle: {
-        width: 55,
-        height: 55,
-        backgroundColor: "#25A18E",
+        width: 60,
+        height: 60,
+        borderWidth:1,
         borderRadius: 50,
         alignItems: "center",
         justifyContent: "center"

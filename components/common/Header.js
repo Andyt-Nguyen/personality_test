@@ -1,5 +1,5 @@
 import React from "react"
-import { View, Text, StyleSheet } from "react-native"
+import { StyleSheet, View, Text } from "react-native"
 
 export default (props) => (
     <View style={styles.container}>
@@ -10,9 +10,9 @@ export default (props) => (
 const styles = StyleSheet.create({
     container: {
         justifyContent: "flex-end",
-        backgroundColor: '#073B4C',
-        height: 80
-      },
+        backgroundColor: "#073B4C",
+        height: 65
+    },
 
     centerText: {
         marginLeft: 15,

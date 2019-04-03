@@ -1,15 +1,15 @@
-import CircleButton from "./CircleButton"
 import Header from "./Header"
 import AttributeContainer from "./AttributeContainer"
 import AttributeText from "./AttributeText"
-import BtnGroup from "./BtnGroup"
-import Questionaire from "./Questionaire"
+import CircleBtn from "./CircleBtn"
+import Center from "./Center"
+import BtnWrapper from "./BtnWrapper"
 
 export {
     Header,
-    CircleButton,
     AttributeContainer,
     AttributeText,
-    BtnGroup,
-    Questionaire
+    CircleBtn,
+    Center,
+    BtnWrapper
 }
